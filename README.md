@@ -8,3 +8,4 @@
 |<img src="assets/images/印度.png">&nbsp;|印度|<label style="color:green">dd通道</label>|
 |<img src="assets/images/菲律宾.png">&nbsp;|菲律宾|<label style="color:green">cs通道</label>&nbsp;&nbsp;&nbsp;&nbsp;<label style="color:green">le通道</label>|
 |<img src="assets/images/越南.png">|越南|<label style="color:green">ly通道</label>| 
+|<img src="assets/images/印度尼西亚.png">|印度尼西亚|<label style="color:green">wa通道</label>|
