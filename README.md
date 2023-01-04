@@ -1,4 +1,4 @@
-# <img src="assets/images/vfastpaylogo.png" height=20> 
+# <img src="assets/images/vfastlogo.png" height=20> 
 # 通道概览
 
 ||&nbsp;&nbsp;国家|通道|
