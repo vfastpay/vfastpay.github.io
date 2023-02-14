@@ -5,12 +5,9 @@
 
 | 区域 | 通道（可点击切换）|
 | --- |-----------------------------------------------------|
-| 巴西 | [iugu](代付.html)|
-| 印度 | [dd](代付(dd).html)&nbsp;&nbsp; [wd](代付(wd).html)|
-| 菲律宾 | [cs](代付(cs).html)&nbsp;&nbsp; [lf](代付(lf).html) |
 | 墨西哥 | [sp](代付(sp).html)|
-| 越南 | [ly](代付(ly).html)|
-| 印度尼西亚 | [wa](代付(wa).html)|
+| 菲律宾 | [cs](代付(cs).html)&nbsp;&nbsp; [lf](代付(lf).html) |
+
 
 ## 请求地址
 https://[[域名]](../help/区域域名.html)/i/transfer/create
