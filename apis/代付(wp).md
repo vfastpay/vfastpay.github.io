@@ -25,7 +25,7 @@ Content-Type:application/json
 |商户订单号 | merchant_order_no | String | 是 | 456545645487 | 商户系统商户订单号，要求32个字符内 |
 |支付通道编码| pay_type|String|是|wp|示例中的固定值|
 |币种|currency|String|是|PHP|菲律宾比索|
-|电话号码 | mobile | String | 是 | 254743123003 | 收款账户为电子钱包时，GCASH，PAYMAYA，GRABPAY，必须保证手机号真实性，代付会根据手机号入账。 |
+|电话号码 | mobile | String | 是 | 254743123003 |必须保证手机号真实性，代付会根据手机号入账。 |
 |邮箱|email|String|是|xxx@gmail.com|收款人邮箱|
 |姓名|name|String|是|jack|收款人姓名|
 |账户号码|account_number|String|是|56454245444|钱包账号|
