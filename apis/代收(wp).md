@@ -1,16 +1,13 @@
 
 # 代收
 
-当前通道：**cs**
+当前通道：**wp**
 
 | 区域 | 通道（可点击切换）|
 | --- |-----------------------------------------------|
-| 巴西 | [iugu](代收.html)|
-| 印度 | [dd](代收(dd).html)&nbsp;&nbsp; [wd](代收(wd).html)|
-| 菲律宾 | [cs](代收(cs).html)&nbsp;&nbsp; [lf](代收(lf).html) |
 | 墨西哥 | [sp](代收(sp).html)|
-| 越南 | [ly](代收(ly).html)|
-| 印度尼西亚 | [wa](代收(wa).html)
+| 菲律宾 | [wp](代收(wp).html)|
+
 
 ## 请求地址
 https://[[域名]](../help/区域域名.html)/i/pay/create
@@ -27,10 +24,8 @@ Content-Type:application/json
 |--|-----|-----|-----|-----|-----|
 |商户号|merchant_code|String|是|100012|商户后台分配的商户号(商户系统->账户信息获取)|
 |商户订单号|merchant_order_no|String|是|221201bx01010|商户系统商户订单号，要求32个字符内|
-|支付通道编码|pay_type|String|是|cs|示例中固定值|
+|支付通道编码|pay_type|String|是|wp|示例中固定值|
 |币种|currency|String|是|PHP|菲律宾比索|
-|交易银行|bank_code|String|是|GCASH_ONLINE|GCASH_ONLINE:gcash online（电子钱包）,GRABPAY_ONLINE:GrabPay online（电子钱包）|
-|订单描述|description|String|是|-|订单描述|
 |姓名|name|String|是|Jack|付款人姓名|
 |电话号码|mobile|String|是|5213562778893|付款人联系方式|
 |邮箱|email|String|是|xxxxx@google.com|付款人邮箱|
@@ -38,7 +33,6 @@ Content-Type:application/json
 |回调地址|notify_url|String|是|https://www.xxx.com/notify|付款成功后支付系统通过该地址通知支付结果|
 |成功转向地址|page_url|String|是|https://www.xxxxx.com/paysuccess|	支付成功的返回页面|
 |下单时间戳|order_time|Number|是|1663402686|精确到秒|
-|客户ip|cust_ip|String|是|27.109.95.255|客户ip地址|
 |签名|sign|String|是|9a55c3868b414cdc740068420a2d3q00|[签名算法](../rule/签名算法.html)|
 
 ## 请求示例
@@ -46,20 +40,17 @@ Content-Type:application/json
 ```json
 {
     "merchant_code": "100012",
-    "merchant_order_no": "20221202064440678397",
-    "pay_type": "cs",
+    "merchant_order_no": "20230214113309362190",
+    "pay_type": "wp",
     "currency": "PHP",
-    "name": "test",
+    "name": "test1",
     "mobile": "09456312891",
     "email": "gmail@gmail.com",
     "amount": "100.00",
-    "notify_url": "https://www.xxxx.com/api/notify",
-    "page_url": "https://www.xxxx.com/paysuccess",
-    "order_time": 1669981480,
-    "bank_code": "GCASH_ONLINE",
-    "description": "description",
-    "cust_ip": "27.109.95.255",
-    "sign": "fe5db31cafcdc7d7f1e2efedfcfa1ef3"
+    "notify_url": "https:\/\/www.uwinpay.com\/api\/public\/index.php\/yodupay\/pay_notify",
+    "page_url": "https:\/\/www.uwinpay.com\/api\/public\/index.php\/yodupay\/pay_return",
+    "order_time": 1676345589,
+    "sign": "95b23d9dc8370c6a3e38f94cc304d079"
 }
 ```
 
