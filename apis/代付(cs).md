@@ -1,16 +1,12 @@
 
 # 代付
 
-当前通道：**cs**
+当前通道：**wp**
 
 | 区域 | 通道（可点击切换）|
 | --- |-----------------------------------------------------|
-| 巴西 | [iugu](代付.html)|
-| 印度 | [dd](代付(dd).html)&nbsp;&nbsp; [wd](代付(wd).html)|
-| 菲律宾 | [cs](代付(cs).html)&nbsp;&nbsp; [lf](代付(lf).html) |
 | 墨西哥 | [sp](代付(sp).html)|
-| 越南 | [ly](代付(ly).html)|
-| 印度尼西亚 | [wa](代付(wa).html)|
+| 菲律宾 | [wp](代付(wp).html)|
 
 ## 请求地址
 https://[[域名]](../help/区域域名.html)/i/transfer/create
@@ -27,12 +23,12 @@ Content-Type:application/json
 |-----|-----|-----|-----|-----|-----|
 |商户号 | merchant_code | String | 是 | 100012 | 商户后台分配的商户号(商户系统->账户信息获取) |
 |商户订单号 | merchant_order_no | String | 是 | 456545645487 | 商户系统商户订单号，要求32个字符内 |
+|支付通道编码| pay_type|String|是|wp|示例中的固定值|
 |币种|currency|String|是|PHP|菲律宾比索|
 |电话号码 | mobile | String | 是 | 254743123003 | 收款账户为电子钱包时，GCASH，PAYMAYA，GRABPAY，必须保证手机号真实性，代付会根据手机号入账。 |
 |邮箱|email|String|是|xxx@gmail.com|收款人邮箱|
-|银行编码|bank_code|String|是|GCASH`(建议使用此类)`|GCASH:电子钱包，BANKRT:instapay银行实时，BANKNRT:pesonet银行非实时，PAYMAYA:电子钱包,GRABPAY:电子钱包|
-|收款账号|bank_account|String|是|56454245444|bank_code为BANKRT、BANKNRT、GCASH（填GCASH账号）时必须传递|
 |姓名|name|String|是|jack|收款人姓名|
+|账户号码|account_number|String|是|56454245444|钱包账号|
 |金额|amount|String|是|100.00|单位(元)，保留两位小数|
 |回调地址|notify_url|String|是|https://www.xxx.com/notify | 付款成功后支付系统通过该地址通知支付结果 |
 |签名|sign|String|是|9a55c3868b414cdc740068420a2d3q00 |[签名算法](../rule/签名算法.html)|
@@ -41,17 +37,17 @@ Content-Type:application/json
 
 ```json
 {
-  "merchant_code": "100012",
-  "merchant_order_no": "20221202071204771165",
-  "currency": "PHP",
-  "amount": "199.10",
-  "notify_url": "https://www.xxx.com/notify",
-  "name": "test",
-  "mobile": "6456312891",
-  "email": "admin@qq.com",
-  "bank_code": "PAYMAYA",
-  "bank_account": "4414333344445555",
-  "sign": "15fa59c8fa4aeef14b1534c239e1d066"
+    "merchant_code": "100012",
+    "merchant_order_no": "20230214103556053779",
+    "pay_type": "wp",
+    "currency": "PHP",
+    "mobile": "6456312891",
+    "email": "gmail@qq.com",
+    "account_number": "11111111",
+    "name": "test",
+    "amount": "100.00",
+    "notify_url": "https:\/\/www.uwinpay.com\/pay_notify",
+    "sign": "262b1773e2276b897a59c99ede7ee3d0"
 }
 ```
 
