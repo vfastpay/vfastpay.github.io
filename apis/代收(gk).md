@@ -1,9 +1,3 @@
----
-sort: 1
-show: 1
----
-
-
 # 代收
 
 当前通道：**gk**
@@ -30,8 +24,8 @@ Content-Type:application/json
 |--|-----|-----|-----|-----|-----|
 |商户号|merchant_code|String|是|100012|商户后台分配的商户号(商户系统->账户信息获取)|
 |商户订单号|merchant_order_no|String|是|221201bx01010|商户系统商户订单号，要求32个字符内|
-|支付通道编码|pay_type|String|是|gt|示例中的固定值|
-|币种|currency|String|是|TZS|坦桑尼亚先令|
+|支付通道编码|pay_type|String|是|gk|示例中的固定值|
+|币种|currency|String|是|KES|肯尼亚先令|
 |姓名|name|String|是|Jack|付款人姓名|
 |电话号码|mobile|String|是|5213562778893|付款人联系方式|
 |邮箱|email|String|是|xxxxx@google.com|付款人邮箱|
@@ -47,8 +41,8 @@ Content-Type:application/json
 {
     "merchant_code": "100012",
     "merchant_order_no": "20230223111448197094",
-    "pay_type": "gt",
-    "currency": "TZS",
+    "pay_type": "gK",
+    "currency": "KES",
     "name": "test",
     "mobile": "645631281",
     "email": "114779881@qq.com",
